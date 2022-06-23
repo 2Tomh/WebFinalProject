@@ -11,7 +11,7 @@ async function findMongoDoc(name){
     //check
     await client.db("admin").command({ping : 1})
 
-    //find one - i built it
+    //find one 
     const myResault = await client.db("Alcohol").collection("product").findOne({name : `${name}`})
 
     //close
@@ -22,18 +22,18 @@ async function findMongoDoc(name){
 exports.findName =  findMongoDoc
 
 
-var MongoClient =require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
 
-const insertDB=function(err, db) {
-  if (err) throw err;
-  var dbo = db.db("Alcohol");
-  var myobj = { name: "black label", price: 400 };
-  dbo.collection("product").insertOne(myobj, function(err, res) {
-    if (err) throw err;
-    console.log("1 document inserted");
-    db.close();
-  });
-}; 
+// var url = "mongodb://localhost:27017/";
 
-MongoClient.connect(url, insertDB)
+// const insertDB=function(err, db) {
+//   if (err) throw err;
+//   var dbo = db.db("Alcohol");
+//   var myobj = { name: "black label", price: 400 };
+//   dbo.collection("product").insertOne(myobj, function(err, res) {
+//     if (err) throw err;
+//     console.log("1 document inserted");
+//     db.close();
+//   });
+// }; 
+
+// MongoClient.connect(url, insertDB)
