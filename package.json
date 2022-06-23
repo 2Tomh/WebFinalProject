@@ -1,0 +1,17 @@
+{
+  "name": "supply-of-beverages",
+  "version": "1.0.0",
+  "description": "this is our alcohol store supply",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Tom, Bar, Gal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongodb": "^4.7.0",
+    "nodemon": "^2.0.16"
+  }
+}
