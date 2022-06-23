@@ -3,7 +3,7 @@ const {MongoClient}= require("mongodb")
 const uri="mongodb://localhost:27017/";
 const client= new MongoClient(uri);
 
-async function findMongoDocument(name){
+async function findMongoDoc(name){
     //connect
     await  client.connect();
     console.log("connect success")
@@ -16,9 +16,10 @@ async function findMongoDocument(name){
 
     //close
     await client.close()
-    
+
     return myResault;
 }
+exports.findName =  findMongoDoc
 
 
 var MongoClient =require('mongodb').MongoClient;
