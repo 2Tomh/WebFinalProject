@@ -1,0 +1,295 @@
+#body.home div.footer div ul li a.contact {
+	float: none;
+	background-position: 0 -326px;
+}
+#body.contact div.body {
+    background: url(./images/map.PNG) no-repeat center top #000000;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+    width: 100%;
+}
+#body.contact div.body div {
+    margin: 0 auto;
+    max-width: 960px;
+    overflow: hidden;
+    padding: 39px 0 0;
+}
+#body.contact div.body div div {
+    background: url(../images/bg-transparent.png) repeat;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 30px 0 35px 133px;
+    width: 747px;
+}
+#body.contact div.body div div img {
+    float: left;
+    left: auto;
+    margin: 0 38px 0 0;
+    padding: 0;
+    position: relative;
+    width: auto;
+}
+#body.contact div.body div div h1 {
+    color: #f80000;
+    float: left;
+    font-family: lato-regular-webfont;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 15px 0 4px;
+    text-align: left;
+    text-transform: uppercase;
+    width: 510px;
+}
+#body.contact div.body div div p {
+    color: #7a6666;
+    float: left;
+    font-family: roboto-regular-webfont;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 510px;
+}
+#body.contact div.body div div p a {
+    color: #7a6666;
+    font-family: roboto-regular-webfont;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+}
+#body div.footer .contact {
+    float: left;
+    margin: 0 10px 0 0;
+    max-width: none;
+    padding: 0 0 61px 40px;
+    width: 590px;
+}
+#body div.footer .contact h1 {
+    color: #626262;
+    float: none;
+    font-family: lato-regular-webfont;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0 0 43px;
+    text-align: left;
+    text-transform: uppercase;
+    width: auto;
+}
+#body div.footer .contact form {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 560px;
+}
+#body div.footer .contact form input {
+    background: none;
+    border: 1px solid #050505;
+    color: #000000;
+    display: block;
+    font-family: lato-regular-webfont;
+    font-size: 14px;
+    font-weight: normal;
+    height: 38px;
+    line-height: 38px;
+    margin: 0 0 8px;
+    padding: 0 0 0 10px;
+    text-align: left;
+    width: 548px;
+}
+#body div.footer .contact form textarea {
+    background: none;
+    border: 1px solid #B6ADB0;
+    color: #7A6666;
+    display: block;
+    font-family: lato-regular-webfont;
+    font-size: 14px;
+    font-weight: normal;
+    height: 270px;
+    line-height: 24px;
+    margin: 0 0 9px;
+    overflow: auto;
+    padding: 7px 0 0 10px;
+    resize: none;
+    text-align: left;
+    width: 548px;
+}
+#body div.footer .contact form input#submit {
+    background: none;
+    border: 2px solid #050505;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    font-family: lato-bold-webfont;
+    font-size: 16px;
+    font-weight: normal;
+    height: 40px;
+    line-height: 36px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 141px;
+}
+#body div.footer .contact form input#submit:hover {
+    background-color: #c8c10d;
+    border: none;
+    height: 40px;
+    width: 141px;
+}
+#body div.footer .contact {
+    float: inline-start;
+    margin: 0 80px 0;
+    max-width: none;
+    padding: 0 0 61px 40px;
+    width: 590px;
+}
+#body div.footer .contact h1 {
+    color: #ed0248;
+    float: in;
+    font-family: lato-regular-webfont;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0 0 60px;
+    text-align: center;
+    text-transform: uppercase;
+    width: inherit;
+}
+#body div.footer .contact form {
+    margin: 18%;
+    overflow: hidden;
+    padding: 0;
+    width: 560px;
+}
+#body div.footer .contact form input {
+    background: none;
+    border: 2px solid #f3f3f3;
+    color: #ffffff;
+    display: block;
+    font-family: lato-regular-webfont;
+    font-size: 14px;
+    font-weight: normal;
+    height: 38px;
+    line-height: 38px;
+    margin: 0 0 8px;
+    padding: 0 0 0 10px;
+    text-align: left;
+    width: 548px;
+}
+#body div.footer .contact form textarea {
+    background: none;
+    border: 2px solid #f3f3f3;
+    color: #ffffff;
+    display: block;
+    font-family: lato-regular-webfont;
+    font-size: 14px;
+    font-weight: normal;
+    height: 270px;
+    line-height: 24px;
+    margin: 0 0 9px;
+    overflow: auto;
+    padding: 7px 0 0 10px;
+    resize: none;
+    text-align: left;
+    width: 548px;
+}
+#body div.footer .contact form input#submit {
+    background: none;
+    border: 2px solid #f3f3f3;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-family: lato-bold-webfont;
+    font-size: 16px;
+    font-weight: normal;
+    height: 40px;
+    line-height: 36px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 141px;
+}
+#body div.footer .contact form input#submit:hover {
+    background-color: #c8c10d;
+    border: none;
+    height: 40px;
+    width: 141px;
+}
+#body div.footer .section {
+    background-color: #000000;
+    margin-top: auto;
+    margin: 0;
+ 
+}
+#body div.footer .section h1 {
+    color: #df1515;
+    display: block;
+    font-family: lato-regular-webfont;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 24px;
+    margin: 0 auto;
+    padding: 24px 0 27px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 202px;
+}
+#body div.footer .section p {
+    color: #000000;
+    display: block;
+    font-family: roboto-regular-webfont;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 202px;
+}
+#body div.footer {
+    margin: 0;
+    max-width: none;
+    overflow: hidden;
+    padding: 0 0 0;
+    width: auto;
+}
+#body div.footer div.sidebar {
+    float: none;
+    margin: 10% auto 0;
+    padding: 36px 0 34px;
+    width: 90%;
+}
+#body div.footer div.article {
+    float: none;
+    margin: 0 auto;
+    padding: 8% 0 0 0;
+    width: 90%;
+}
+#body div.footer {
+    margin: 0 auto;
+    max-width: 960px;
+    overflow: hidden;
+    padding: 40px 0 110px;
+}
+form {
+    background:rgba(0, 0, 0, 0); 
+    width:300px;
+    margin:30px auto;
+    border-radius:0.4em;
+    border:1px solid #191919;
+    overflow:hidden;
+    position:relative;
+    box-shadow: 0 5px 10px 5px rgba(179, 35, 35, 0.2);
+}

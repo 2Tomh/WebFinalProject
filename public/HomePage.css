@@ -13,7 +13,7 @@ body{
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    color:white;
+    color:rgb(252, 252, 252);
     height: 300px;
 }
 
@@ -22,9 +22,11 @@ body{
     margin: auto;
     text-align: center;
 }
+.buttonBlack {
+	border: 3px solid white;
+	font-weight: bold;
+	margin-top: 80px;
+  }
 
-.buttonBlack{
-    border: 3px solid white;
-    font-weight: bold;
-    margin-top: 80px; 
-}
+
+

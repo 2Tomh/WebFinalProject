@@ -1,19 +1,30 @@
-function loadHome(){
-    fetch("http://localhost:3000/HomePage.html")
-    .then(function(response){
-        return response.text()
-    })
-    .then(function(html){
-        document.getElementById("renderPage").innerHTML=html;
-    });
+const isAuthenticated = localStorage.getItem("isAuthenticated")
+const Logout = document.getElementById("Logout")
+
+if(!isAuthenticated){
+    window.location.href = "/login"
 }
 
-function loadLogin(){
-    fetch("http://localhost:3000/Login.html")
-    .then(function(response){
-        return response.text()
-    })
-    .then(function(html){
-        document.getElementById("renderPage").innerHTML=html;
-    });
-}
+
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+
+
+  // log out
+Logout.addEventListener("click", (e) => {
+    e.preventDefault();
+    if(isAuthenticated){
+        localStorage.setItem("isAuthenticated", false)
+        window.location.href = "/login"
+    }
+    
+})
+
+
+
+

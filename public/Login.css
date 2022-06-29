@@ -2,15 +2,19 @@
 
 * { box-sizing: border-box; }
 
+#form-message{
+display: none;
+color:red
+}
 h1 {
 	font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
-  color:white;
+  color:rgb(0, 0, 0);
   font-size:12px;
 
 }
 
 form {
- 	background:#111; 
+ 	background:rgb(0, 0, 0); 
   width:300px;
   margin:30px auto;
   border-radius:0.4em;
@@ -81,7 +85,7 @@ input[type=text],
 input[type=password] {
  	width:100%;
   padding:8px 5px;
-  background:linear-gradient(#1f2124, #27292c);
+  background:linear-gradient(#686868, #555555);
   border:1px solid #222;
   box-shadow:
     0 1px 0 rgba(255,255,255,0.1);
@@ -146,3 +150,166 @@ label:hover ~ input[type=text],
 label:hover ~ input[type=password] {
  	background:#27292c;
 }
+
+
+/* INDEX HTML */
+/* bootom of page facebook,google,twiter */
+#footer {
+	background-color: #f8f8f8;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#footer div {
+	margin: 0 auto;
+	max-width: 960px;
+	overflow: hidden;
+	padding: 59px 0 13px;
+}
+#footer div p {
+	color: #ffffff;
+	display: block;
+	font-family: roboto-regular-webfont;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 15px;
+	margin: 0;
+	padding: 33px 0 50px;
+	text-align: center;
+	text-transform: none
+}
+#footer div .connect {
+	display: block;
+	height: 30px;
+	margin: 0 auto;
+	max-width: none;
+	overflow: hidden;
+	padding: 0;
+	width: 240px;
+}
+#footer div .connect a {
+	background: url(../images/icons.png) no-repeat;
+	display: block;
+	float: left;
+	height: 30px;
+	margin: 0 15px;
+	padding: 0;
+	text-indent: -99999px;
+	width: 30px;
+}
+#footer div .connect a.facebook {
+	background-position: 0 0;
+}
+#footer div .connect a.googleplus {
+	background-position: 0 -32px;
+}
+#footer div .connect a.pinterest {
+	background-position: 0 -64px;
+}
+#footer div .connect a.twitter {
+	background-position: 0 -96px;
+}
+/*----------------------------------------footer-styles---------------------------------------*/
+#footer {
+	background-color: #0e0d0d;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#footer div {
+	margin: 0 auto;
+	max-width: 960px;
+	overflow: hidden;
+	padding: 59px 0 13px;
+}
+#footer div p {
+	color: #FFFFFF;
+	display: block;
+	font-family: roboto-regular-webfont;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 15px;
+	margin: 0;
+	padding: 33px 0 50px;
+	text-align: center;
+	text-transform: none
+}
+#footer div .connect {
+	display: block;
+	height: 30px;
+	margin: 0 auto;
+	max-width: none;
+	overflow: hidden;
+	padding: 0;
+	width: 240px;
+}
+#footer div .connect a {
+	background: url(../images/icons.png) no-repeat;
+	display: block;
+	float: left;
+	height: 30px;
+	margin: 0 15px;
+	padding: 0;
+	text-indent: -99999px;
+	width: 30px;
+}
+#footer div .connect a.facebook {
+	background-position: 0 0;
+}
+#footer div .connect a.googleplus {
+	background-position: 0 -32px;
+}
+#footer div .connect a.pinterest {
+	background-position: 0 -64px;
+}
+#footer div .connect a.twitter {
+	background-position: 0 -96px;
+}
+
+.barlogo{
+    height: 150px;
+    margin-top: 80px;
+    width: 2000px;
+}
+
+
+#nav-container{
+    display:flex;
+    width: 100vw;
+}
+
+
+#bottles{
+    background-image: url("./images/bottels.jpg");
+    background-repeat: repeat-x;
+   height: 100px;
+    width: 99vw;
+    background-size: contain;
+}
+
+/* HomePagge.html */
+body{
+  background-color: black;
+}
+
+#logoImg{
+  height: 150px;
+  margin-top: 80px;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  color:rgb(252, 252, 252);
+  height: 300px;
+}
+
+.center{
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+

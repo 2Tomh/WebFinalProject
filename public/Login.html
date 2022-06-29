@@ -1,36 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="Login.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="Login.css">
+  <link rel="stylesheet" href="HomePage.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="contact.css">
 
 </head>
+
 <body id="Login">
-    <form>
-        <h1>Employer Log in</h1>
-        <div class="inset">
-        <p>
-          <label for="email">EMAIL ADDRESS</label>
-          <input type="text" name="email" id="email">
-        </p>
-        <p>
-          <label for="password">PASSWORD</label>
-          <input type="password" name="password" id="password">
-        </p>
-        <p>
-          <input type="checkbox" name="remember" id="remember">
-          <label for="remember">Remember me for 14 days</label>
-        </p>
-        </div>
-        <p class="p-container">
-          <span>Forgot password ?</span>
-          <input type="submit" name="go" id="go" value="Log in">
-        </p>
-      </form>
+
+  <!-- Sidebar -->
+  <div class="w3-sidebar w3-bar-block w3-border-right w3-black" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <a href="/login" class="w3-bar-item w3-button">Login</a>
+    <a class="w3-bar-item w3-button" id="Logout">Log out</a>
+  </div>
+
+  <!-- Page Content -->
+  <div class="w3-black">
+    <div id="nav-container">
+      <button class="w3-button w3-bar-block w3-xlarge w3-orange" onclick="w3_open()">☰</button>
+      <img id="bottles">
+    </div>
+    <div class="w3-container">
+
+      <h1>Ethan-all</h1>
+    </div>
+  </div>
+  <script>
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+  </script>
+
+  <!-- render  page -->
+  <form class="Login" id="form">
+    <h1>web Log in</h1>
+
+    <div class="inset" id="inset">
+
+      <div>
+        <label for="email">EMAIL ADDRESS</label>
+        <input type="text" name="user name" id="email">
+      </div>
+      <div>
+        <label for="password">PASSWORD</label>
+        <input type="password" name="password" id="password">
+      </div>
+      <div>
+        <input type="checkbox" name="remember" id="remember">
+        <label for="remember">Remember me</label>
+      </div>
+    </div>
+    <div class="p-container">
+      <p id="form-message">Email or password are invalid, please try again</p>
+      <input type="submit" name="go" id="go" value="Log in">
+    </div>
+  </form>
+
+  <!-- bootom of page facebook,google,twiter -->
+  <div id="footer">
+    <div>
+      <div class="connect">
+        <a href="https://www.facebook.com/" class="facebook">facebook</a>
+        <a href="https://twitter.com/" class="twitter">twitter</a>
+        <a href="https://myaccount.google.com/" class="googleplus">googleplus</a>
+        <a href="https://www.pinterest.com/" class="pinterest">pinterest</a>
+      </div>
+      <p>&copy; 2022 suplly web. All Rights Reserved.</p>
+    </div>
+  </div>
+  </div>
+<script src="./JS/Login.js"></script>
+
 </body>
+
 </html>
