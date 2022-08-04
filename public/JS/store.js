@@ -1,8 +1,14 @@
+
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
     ready()
 }
+
+fetchProducts()
+const cart = [];
+
+const categoryContainer = document.getElementById("category-container")
 
 function ready() {
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
@@ -29,10 +35,77 @@ function ready() {
 function purchaseClicked() {
     alert('Thank you for your purchase')
     var cartItems = document.getElementsByClassName('cart-items')[0]
+    const username = localStorage.getItem("username");
+    fetch("/purchase",{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify({products:cart, username})
+    }).then(res => console.log(res))
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
     }
     updateCartTotal()
+}
+
+function fetchProducts(){
+    fetch("/categories").then(res =>res.json()).then(categories =>{
+        for(let i =0; i< categories.length ; i++){
+            createCategories(categories[i]);
+    }}
+    )
+}
+
+function createCategories(category){
+        const categorySection = document.createElement('section');
+        const categoryTitle = document.createElement("h2");
+        const itemsContainer = document.createElement("div");
+        categorySection.className = 'container content-section';
+        categoryTitle.className = 'section-header';
+        categoryTitle.innerHTML = category.name;
+        itemsContainer.className = 'shop-items';
+
+        categorySection.appendChild(categoryTitle)
+        categorySection.appendChild(itemsContainer)
+
+
+
+        console.log(category)
+        for(let i =0; i<category.products.product.length; i++){
+
+        const itemContainer = document.createElement("div");
+        const itemTitle = document.createElement("span");
+        const image = document.createElement("img");
+        const itemsDetails = document.createElement("div");
+        const itemPrice = document.createElement("span");
+        const button = document.createElement("button");
+    
+
+        itemContainer.className = 'shop-item';
+        itemContainer.id = category.products.product[i]._id
+        itemTitle.className = 'shop-item-title';
+        itemTitle.innerHTML =category.products.product[i].name;
+        image.className = 'shop-item-image';
+        image.src = `${category.products.product[i].imagePath}`
+        itemsDetails.className = 'shop-item-details';
+        itemPrice.className= 'shop-item-price';
+        itemPrice.innerHTML = category.products.product[i].price
+        button.className = 'btn btn-primary shop-item-button'
+        button.type = 'button'
+        button.innerHTML = 'Add to cart'
+
+        itemsDetails.appendChild(itemPrice)
+        itemsDetails.appendChild(button);
+        itemContainer.appendChild(itemTitle);
+        itemContainer.appendChild(image);
+        itemContainer.appendChild(itemsDetails);
+        console.log(itemContainer)
+        itemsContainer.appendChild(itemContainer)
+        }
+
+        categoryContainer.appendChild(categorySection)
+
 }
 
 function removeCartItem(event) {
@@ -55,6 +128,7 @@ function addToCartClicked(event) {
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
+    cart.push({title, price});
     addItemToCart(title, price, imageSrc)
     updateCartTotal()
 }

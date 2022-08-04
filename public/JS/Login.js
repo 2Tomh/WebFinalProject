@@ -24,6 +24,7 @@ form.addEventListener("submit", (e) => {
         }
         else{
             localStorage.setItem("isAuthenticated", true)
+            localStorage.setItem("username", userEmail);
             window.location.href = "/"
         }
     })

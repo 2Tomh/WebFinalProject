@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const path= require("path");
+const { runInNewContext } = require('vm');
 
 
 
@@ -19,6 +20,7 @@ app.get('/',(req, res)=>{
   res.sendFile(path.join(__dirname,"./public/HTML/index.html"))
 })
 
+//contact
 app.get('/personDATA', (req, res) => {
   var newcontact=
   {
@@ -32,6 +34,7 @@ app.get('/personDATA', (req, res) => {
   }
   mysave(newcontact);
 })
+
 
 // Login
 app.post('/login', (req, res) => {
@@ -52,6 +55,25 @@ app.post('/login', (req, res) => {
       }
       )}
   userLogin(email)
+})
+
+
+//store
+app.post('/purchase', async(req, res) => {
+    const {products, username} = req.body;
+
+    if(!products || !username){
+      return res.send("Received invalid data");
+    }
+    await db.purchase(products, username);
+    res.send("Purchased successfully");
+    
+})
+
+
+app.get('/categories', async(req, res) => {
+  const categories = await db.getCategories();
+  res.send(categories);
 })
 
 // connect to pages

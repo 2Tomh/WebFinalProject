@@ -13,9 +13,6 @@ async function findMongoDoc(name){
     //check
     await client.db("admin").command({ping : 1})
 
-    //find one 
-    const myResault = await client.db("Alcohol").collection("product").findOne({name : `${name}`})
-
     //close
     await client.close()
 
@@ -41,3 +38,36 @@ async function FindUser(email){
     return user;
 }
 exports.FindUser =  FindUser
+
+
+// save PURCHASE
+async function purchase(products, username){
+    await client.connect();
+    await client.db("Alcohol").collection("PURCHASE").insertOne({products, username})
+    await client.close()
+    return;
+}
+exports.purchase = purchase
+
+
+async function getCategories(){
+    await client.connect();
+    const categories = await client.db("Alcohol").collection("Categories").aggregate([
+        {
+            $lookup:
+            {
+                from:'Products',
+                localField: 'item',
+                foreignField: 'products.productId',
+                as: 'products.product'
+
+            }
+        },
+      
+        
+    ]).toArray()
+    await client.close()
+    return categories;
+}
+
+exports.getCategories = getCategories

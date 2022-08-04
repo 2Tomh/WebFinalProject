@@ -262,7 +262,7 @@
 #body div.footer div.sidebar {
     float: none;
     margin: 10% auto 0;
-    padding: 36px 0 34px;
+    padding: inherit;
     width: 90%;
     background-color: #2b3843d9;
 }
@@ -297,6 +297,7 @@ form {
 	position: relative;
   }
 #body div.sidebar h1{
+    direction: rtl;
     font-family: "segoe UI", Arial, sans-serif;
     font-weight: 600;
     margin:10px 0;
@@ -309,8 +310,10 @@ form {
     margin:10px 0;
     font-size: large;
     font-weight: bold;
+    direction: rtl;
 }
 #body div.sidebar  header{
+    direction: rtl;
     color: black;
     text-decoration: underline;
     font-family: "segoe UI", Arial, sans-serif;
