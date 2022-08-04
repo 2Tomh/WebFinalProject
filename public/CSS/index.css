@@ -1,0 +1,141 @@
+/*----------------------------------------footer-styles---------------------------------------*/
+#footer {
+	background-color: #0e0d0d;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#footer div {
+	margin: 0 auto;
+	max-width: 960px;
+	overflow: hidden;
+	padding: 59px 0 13px;
+}
+#footer div p {
+	color: #FFFFFF;
+	display: block;
+	font-family: roboto-regular-webfont;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 15px;
+	margin: 0;
+	padding: 33px 0 50px;
+	text-align: center;
+	text-transform: none
+}
+#footer div .connect {
+	display: block;
+	height: 30px;
+	margin: 0 auto;
+	max-width: none;
+	overflow: hidden;
+	padding: 0;
+	width: 240px;
+}
+#footer div .connect a {
+	background: url(../images/icons.png) no-repeat;
+	display: block;
+	float: left;
+	height: 30px;
+	margin: 0 15px;
+	padding: 0;
+	text-indent: -99999px;
+	width: 30px;
+}
+#footer div .connect a.facebook {
+	background-position: 0 0;
+}
+#footer div .connect a.googleplus {
+	background-position: 0 -32px;
+}
+#footer div .connect a.pinterest {
+	background-position: 0 -64px;
+}
+#footer div .connect a.twitter {
+	background-position: 0 -96px;
+}
+
+.barlogo{
+    height: 150px;
+    margin-top: 80px;
+    width: 2000px;
+}
+
+
+#nav-container{
+    display:flex;
+    width: 100vw;
+}
+
+
+#bottles{
+    background-image: url("../images/bottels.jpg");
+    background-repeat: repeat-x;
+   height: 100px;
+    width: 99vw;
+    background-size: contain;
+}
+
+/* home page */
+
+  .w3-black, .w3-hover-black:hover {
+	color: #fff !important;
+	background-color: #641313 !important;
+  }
+  /* home */
+  .ab{
+	width: auto;
+	background-image: url("..//images/images/homePagePhoto1.jpeg");
+	min-height: 550px;
+	background-repeat:no-repeat;
+	background-size:100%;
+	position: relative;
+	background-position: bottom right;
+	
+  }
+#container body div.side  h1 , p{
+    font-family: "segoe UI", Arial, sans-serif;
+    font-weight: 600;
+    margin:10px 0;
+    color: rgb(255, 255, 255);
+	box-shadow: #641313;
+}
+#body div.side p{
+    color: rgb(255, 255, 255);
+    font-family: "segoe UI", Arial, sans-serif;
+    font-weight: 600;
+    margin:10px 0;
+    font-size: large;
+    font-weight: bold;
+}
+#body div.side  h1{
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    font-family: "segoe UI", Arial, sans-serif;
+    font-weight: 900;
+    margin:10px 0; 
+    position: relative;
+    text-size-adjust:inherit;
+    font-size:xx-large;
+}
+#body div.foot div.side {
+    float: right;
+    margin: 10% auto 0;
+    padding: inherit;
+    width: auto;
+    background-color: #a73838d9;
+	margin-top:100px;
+	margin-right: 5%;
+	text-align: center;
+}
+#body div.foot {
+	font-weight: bold;
+	margin-right: auto;
+  }
+  .buttonBlack {
+	border: 3px solid white;
+	font-weight: bold;
+	margin-top: 50px;
+  }
+
+/* copied css */

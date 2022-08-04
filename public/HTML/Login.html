@@ -7,27 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <link rel="stylesheet" href="Login.css">
-  <link rel="stylesheet" href="HomePage.css">
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="contact.css">
-
-
-
+  <link rel="stylesheet" href="./CSS/Login.css">
+  <link rel="stylesheet" href="./CSS/HomePage.css">
+  <link rel="stylesheet" href="./CSS/index.css">
+ 
 
 </head>
 
-<body>
+<body id="Login">
 
   <!-- Sidebar -->
   <div class="w3-sidebar w3-bar-block w3-border-right w3-black" style="display:none" id="mySidebar">
     <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
     <a href="/login" class="w3-bar-item w3-button">Login</a>
-    <a href="/" class="w3-bar-item w3-button" >Home</a>
-    <a href="/about us" class="w3-bar-item w3-button">About us</a>
-    <a href="/contact" class="w3-bar-item w3-button" >Contact</a>
     <a class="w3-bar-item w3-button" id="Logout">Log out</a>
   </div>
 
@@ -37,35 +31,41 @@
       <button class="w3-button w3-bar-block w3-xlarge w3-orange" onclick="w3_open()">☰</button>
       <img id="bottles">
     </div>
-    <div class="w3-container">
-
-      <h1>Ethan-all</h1>
-    </div>
+  
   </div>
+  <script>
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
 
-  <!-- part1 -->
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+  </script>
 
-  <div class="container">
-    <!-- logo -->
-    <div class="center">
-      <img src="./images/logo.PNG" alt="" id="logoImg">
+  <!-- render  page -->
+  <div class="bg-img">
+  <form class="Login" id="form">
+    <h1>web Log in</h1>
 
+    <div class="inset" id="inset">
+
+      
+        <label for="email">EMAIL ADDRESS</label>
+        <input type="text" name="user name" id="email">
+      
+        <label for="password">PASSWORD</label>
+        <input type="password" name="password" id="password">
+      
+        <input type="checkbox" name="remember" id="remember">
+        <label for="remember">Remember me</label>
+     
+    <div class="p-container">
+      <p id="form-message">Email or password are invalid, please try again</p>
+      <input type="submit" name="go" id="go" value="Log in">
     </div>
-    <!-- button -->
-    <div>
-      <a class="w3-button w3-black buttonBlack" href="mailto:beerkoles@gmail.com">contact us</a>
-    </div>
-
-
-  </div>
-
-  <!-- part2 -->
-  <div class="container">
-    <!-- description -->
-    <p>this is our store supply</p>
-
-  </div>
-
+  </form>
+</div>
   <!-- bootom of page facebook,google,twiter -->
   <div id="footer">
     <div>
@@ -79,7 +79,8 @@
     </div>
   </div>
   </div>
-  <script src="./index.js"></script>
+<script src="./JS/Login.js"></script>
+
 </body>
 
 </html>

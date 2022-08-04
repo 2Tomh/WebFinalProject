@@ -13,21 +13,11 @@ app.use(express.static('public'))
 
 
 app.get('/login',(req, res)=>{
-  res.sendFile(path.join(__dirname,"./public/Login.html"))
+  res.sendFile(path.join(__dirname,"./public/HTML/Login.html"))
 })
 app.get('/',(req, res)=>{
-  res.sendFile(path.join(__dirname,"./public/index.html"))
+  res.sendFile(path.join(__dirname,"./public/HTML/index.html"))
 })
-
-app.get('/getReasult', (req, res) => {
-  let name="whiskey"
-  async function myprogram(name){
-    await db.findName.then(resault =>  res.send(resault) )
-  }
-  myprogram(name)
-})
-
-
 
 app.get('/personDATA', (req, res) => {
   var newcontact=
@@ -38,7 +28,7 @@ app.get('/personDATA', (req, res) => {
   }
     
   async function mysave(detail) {
-    await db.savePerson(detail).then((result) => res.sendFile(path.join(__dirname,"./public/index.html")));
+    await db.savePerson(detail).then((result) => res.sendFile(path.join(__dirname,"./public/HTML/index.html")));
   }
   mysave(newcontact);
 })
@@ -53,30 +43,28 @@ app.post('/login', (req, res) => {
     await db.FindUser(email).then(result =>{
      
       if(!result){
-        
-       return  res.send(false)
-      }
+       return  res.send(false)      }
       if(password==result.password){
-        
-         return res.send(true)
+         return res.send(true)}
+     else{  
+            return  res.send(false)
+          }
       }
-        else{
-          
-         return  res.send(false)
-        }
-      }
-      )
-    }
-  
+      )}
   userLogin(email)
 })
 
 // connect to pages
 
 app.get('/contact' , (req, res)=> {
-  res.sendFile(path.join(__dirname,"./public/contact.html"));
+  res.sendFile(path.join(__dirname,"./public/HTML/contact.html"));
 })
-
+app.get('/store' , (req, res)=> {
+  res.sendFile(path.join(__dirname,"./public/HTML/store.html"));
+})
+app.get('/about' , (req, res)=> {
+  res.sendFile(path.join(__dirname,"./public/HTML/about.html"));
+})
 
 app.listen(port, () => {
   console.log(`http://localhost:${port}`)

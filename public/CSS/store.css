@@ -1,0 +1,552 @@
+/* home Page */
+body{
+    background-color: black;
+}
+
+#logoImg{
+    height: 150px;
+    margin-top: 5px;
+}
+
+.container{
+    position: relative;
+    display: contents;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color:rgb(252, 252, 252);
+    height: auto;
+}
+
+.center{
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+/* bootom of page facebook,google,twiter */
+#footer {
+	background-color: #f8f8f8;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#footer div {
+	margin: 0 auto;
+	max-width: 960px;
+	overflow: hidden;
+	padding: 59px 0 13px;
+}
+#footer div p {
+	color: #ffffff;
+	display: block;
+	font-family: roboto-regular-webfont;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 15px;
+	margin: 0;
+	padding: 33px 0 50px;
+	text-align: center;
+	text-transform: none
+}
+#footer div .connect {
+	display: block;
+	height: 30px;
+	margin: 0 auto;
+	max-width: none;
+	overflow: hidden;
+	padding: 0;
+	width: 240px;
+}
+#footer div .connect a {
+	background: url(../images/icons.png) no-repeat;
+	display: block;
+	float: left;
+	height: 30px;
+	margin: 0 15px;
+	padding: 0;
+	text-indent: -99999px;
+	width: 30px;
+}
+#footer div .connect a.facebook {
+	background-position: 0 0;
+}
+#footer div .connect a.googleplus {
+	background-position: 0 -32px;
+}
+#footer div .connect a.pinterest {
+	background-position: 0 -64px;
+}
+#footer div .connect a.twitter {
+	background-position: 0 -96px;
+}
+/*----------------------------------------footer-styles---------------------------------------*/
+#footer {
+	background-color: #0e0d0d;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#footer div {
+	margin: 0 auto;
+	max-width: 960px;
+	overflow: hidden;
+	padding: 59px 0 13px;
+}
+#footer div p {
+	color: #FFFFFF;
+	display: block;
+    font-family: lato-regular-webfont;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 15px;
+	margin: 0;
+	padding: 33px 0 50px;
+	text-align: center;
+	text-transform: none
+}
+#footer div .connect {
+	display: block;
+	height: 30px;
+	margin: 0 auto;
+	max-width: none;
+	overflow: hidden;
+	padding: 0;
+	width: 240px;
+}
+#footer div .connect a {
+	background: url(../images/icons.png) no-repeat;
+	display: block;
+	float: left;
+	height: 30px;
+	margin: 0 15px;
+	padding: 0;
+	text-indent: -99999px;
+	width: 30px;
+}
+#footer div .connect a.facebook {
+	background-position: 0 0;
+}
+#footer div .connect a.googleplus {
+	background-position: 0 -32px;
+}
+#footer div .connect a.pinterest {
+	background-position: 0 -64px;
+}
+#footer div .connect a.twitter {
+	background-position: 0 -96px;
+}
+
+.barlogo{
+    height: 150px;
+    margin-top: 80px;
+    width: 2000px;
+}
+
+
+#nav-container{
+    display:flex;
+    width: 100vw;
+}
+
+
+#bottles{
+    background-image: url("../images/bottels.jpg");
+    background-repeat: repeat-x;
+   height: 100px;
+    width: 99vw;
+    background-size: contain;
+}
+
+
+/* store css */
+* {
+    box-sizing: border-box;
+    color: #777;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.nav ul {
+    margin: 0;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, .3)
+}
+
+.main-nav li {
+    padding: 0 5%;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, .3)
+}
+
+.main-header {
+    background-color: rgba(0, 0, 0, .6);
+    background-image: url("Images/Header Background.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+.band-name {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: lato-regular-webfont;
+    font-weight: normal;
+    color: white;
+}
+
+.band-name-large {
+    font-size: 8em;
+}
+
+.content-section {
+    margin: 1em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+.section-header {
+    font-family: lato-regular-webfont;
+    font-weight: normal;
+    color: rgb(230, 95, 95);
+    text-align: match-parent;
+    font-size: 2.5em;
+}
+
+.about-band-image {
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+    border-radius: 50%;
+}
+
+.main-footer {
+    background-color: #56CCF2;
+    color: white;
+    padding: .25em 0;
+}
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+.footer-nav img {
+    width: 30px;
+    height: 30px;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #2D9CDB;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.btn-play {
+    display: block;
+    margin: 0 auto;
+    color: #2D9CDB;
+    font-size: 4em;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    text-align: center;
+}
+
+.btn-primary {
+    color: white;
+    background-color:  rgb(230, 95, 95);
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color:  rgb(230, 95, 95);
+}
+
+.tour-row {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.tour-row:last-child {
+    border: none;
+}
+
+.tour-item {
+    display: inline-block;
+    padding-right: .5em;
+}
+
+.tour-date {
+    color: #555;
+    width: 11%;
+    font-weight: bold;
+}
+
+.tour-city {
+    width: 24%;
+}
+
+.tour-arena {
+    width: 42%;
+}
+
+.tour-btn {
+    max-width: 19%;
+}
+
+.shop-item {
+    margin: 15px;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #ca7f1e;
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 150px;
+}
+
+.shop-item-details {
+    display: grid;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    color: rgb(230, 95, 95);
+}
+
+.shop-items {
+    display: block ruby;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: rgb(255, 255, 255);
+}
+
+.cart-column {
+    display: revert;
+    align-items: center;
+    border-bottom: 1px solid rgb(230, 95, 95);;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: rgb(250, 250, 250);
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #f25656;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: large;
+}
+
+ /* Dropdown Button */
+ .dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+  }
+  
+  /* The search field */
+  #myInput {
+    box-sizing: border-box;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* The search field when it gets focus/clicked on */
+  #myInput:focus {outline: 3px solid #ddd;}
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    border: 1px solid #ddd;
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;} 

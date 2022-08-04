@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="./CSS/Login.css">
+  <link rel="stylesheet" href="./CSS/HomePage.css">
+  <link rel="stylesheet" href="./CSS/index.css">
+  <link rel="stylesheet" href="./CSS/contact.css">
+ <link rel="stylesheet" href="./CSS/store.css">
+</head>
+
+
+<body>
+  <!-- Sidebar -->
+  <div class="w3-sidebar w3-bar-block w3-border-right w3-black" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <a href="/" class="w3-bar-item w3-button" >Home</a>
+    <a href="/about" class="w3-bar-item w3-button">About us</a>
+    <a href="/contact" class="w3-bar-item w3-button" >Contact</a>
+    <a href="/store" class="w3-bar-item w3-button" >store</a>
+    <a class="w3-bar-item w3-button" id="Logout">Log out</a>
+    
+  </div>
+
+  <!-- Page Content -->
+  <div class="w3-black">
+    <div id="nav-container">
+      <button class="w3-button w3-bar-block w3-xlarge w3-orange" onclick="w3_open()">☰</button>
+      <img id="bottles">
+    </div>
+   </div>
+
+   <header class="main-header">
+    <h1 class="band-name band-name-large">The Alcohol</h1>
+   </header>
+   <section class="container content-section">
+    <h2 class="section-header">Beer 330 ml</h2>
+    <div class="shop-items">
+        <div class="shop-item">
+            <span class="shop-item-title" id="">Goldstar</span>
+            <img class="shop-item-image" src="./images/images/goldstar330.jpg">
+            <div class="shop-item-details">
+                <span class="shop-item-price">₪ 34.99</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+             </div>
+         </div>
+         <div class="shop-item">
+            <span class="shop-item-title">Goldstar UF</span>
+            <img class="shop-item-image" src="./images/images/goldstaruf.jpg">
+            <div class="shop-item-details">
+                <span class="shop-item-price">₪ 39.99</span>
+                <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title">Stella</span>
+            <img class="shop-item-image" src="./images/images/stella.jpg">
+            <div class="shop-item-details">
+                <span class="shop-item-price">₪ 29.99</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title">Carlsberg</span>
+            <img class="shop-item-image" src="./images/images/Carlsberg.jpg">
+            <div class="shop-item-details">
+                <span class="shop-item-price">₪ 29.99</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+          </div>
+            <div class="shop-item">
+              <span class="shop-item-title">Corona</span>
+              <img class="shop-item-image" src="./images/images/Corona.jpg">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">₪ 29.99</span>
+                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+              </div>
+        </div>
+        <div class="shop-item">
+          <span class="shop-item-title">Heineken</span>
+          <img class="shop-item-image" src="./images/images/Heineken.jpg">
+          <div class="shop-item-details">
+              <span class="shop-item-price">₪ 29.99</span>
+              <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+          </div>
+    </div>
+    <div class="shop-item">
+      <span class="shop-item-title">Tuborg</span>
+      <img class="shop-item-image" src="./images/images/Tuborg.jpg">
+      <div class="shop-item-details">
+          <span class="shop-item-price">₪ 29.99</span>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+      </div>
+    </div>
+    </div>
+    </section>
+   <section class="container content-section">
+    <h2 class="section-header">White Wine 750 ml</h2>
+    <div class="shop-items">
+        <div class="shop-item">
+            <span class="shop-item-title">Blue-Nun Gewürztraminer</span>
+            <img class="shop-item-image" src="./images/images/BlueNun.png">
+            <div class="shop-item-details">
+                <span class="shop-item-price">₪ 38.99</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title">Riesling</span>
+            <img class="shop-item-image" src="./images/images/Rizling.jpg">
+            <div class="shop-item-details">
+                <span class="shop-item-price">₪ 59.99</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="shop-item">
+          <span class="shop-item-title">Chardonnay</span>
+          <img class="shop-item-image" src="./images/images/shardone.jpg">
+          <div class="shop-item-details">
+              <span class="shop-item-price">₪ 56.99</span>
+              <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+          </div>
+          </div>
+          <div class="shop-item">
+            <span class="shop-item-title">Chablis</span>
+            <img class="shop-item-image" src="./images/images/Shibli.jpg">
+            <div class="shop-item-details">
+                <span class="shop-item-price">₪ 89.99</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="shop-item">
+          <span class="shop-item-title">Sauvignon</span>
+          <img class="shop-item-image" src="./images/images/sovnion.jpg">
+          <div class="shop-item-details">
+              <span class="shop-item-price">₪ 27.99</span>
+              <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+          </div>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-title">Amphorae</span>
+        <img class="shop-item-image" src="./images/images/AMPGORAE.jpg">
+        <div class="shop-item-details">
+            <span class="shop-item-price">₪ 76.99</span>
+            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+        </div>
+    </div>
+    <div class="shop-item">
+      <span class="shop-item-title">Miraval</span>
+      <img class="shop-item-image" src="./images/images/Miraval.jpg">
+      <div class="shop-item-details">
+          <span class="shop-item-price">₪ 89.99</span>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+      </div>
+   </div>
+   </section>
+   <section class="container content-section">
+    <h2 class="section-header">Red wine 750 ml</h2>
+    <div class="shop-items">
+        <div class="shop-item">
+            <span class="shop-item-title">Chiraz</span>
+            <img class="shop-item-image" src="./images/images/Chiraz.jpg">
+            <div class="shop-item-details">
+                <span class="shop-item-price">₪ 49.99</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="shop-item">
+          <span class="shop-item-title">Vino</span>
+          <img class="shop-item-image" src="./images/images/vino.jpg">
+          <div class="shop-item-details">
+              <span class="shop-item-price">₪ 114.99</span>
+              <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+          </div>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-title">Cabernet Sauvignon</span>
+        <img class="shop-item-image" src="./images/images/kavrne sauvnion.jpg">
+        <div class="shop-item-details">
+            <span class="shop-item-price">₪ 98.99</span>
+            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+        </div>
+    </div>
+    <div class="shop-item">
+      <span class="shop-item-title">Raziel</span>
+      <img class="shop-item-image" src="./images/images/Raziel.jpg">
+      <div class="shop-item-details">
+          <span class="shop-item-price">₪ 139.99</span>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+      </div>
+  </div>
+  <div class="shop-item">
+    <span class="shop-item-title">Chianti</span>
+    <img class="shop-item-image" src="./images/images/Chanti.png">
+    <div class="shop-item-details">
+        <span class="shop-item-price">₪ 19.99</span>
+        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+    </div>
+</div>
+<div class="shop-item">
+  <span class="shop-item-title">Merlot RECANATI</span>
+  <img class="shop-item-image" src="./images/images/Merlot RECANATI.jpg">
+  <div class="shop-item-details">
+      <span class="shop-item-price">₪ 99.99</span>
+      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+  </div>
+</div>
+<div class="shop-item">
+  <span class="shop-item-title">Titora</span>
+  <img class="shop-item-image" src="./images/images/TITORA.jpg">
+  <div class="shop-item-details">
+      <span class="shop-item-price">₪ 114.99</span>
+      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+  </div>
+</div>
+
+     </div>   
+     <section class="container content-section">
+      <h2 class="section-header">Vodka 750 ml</h2>
+      <div class="shop-items">
+          <div class="shop-item">
+              <span class="shop-item-title">Beluga </span>
+              <img class="shop-item-image" src="./images/images/baloga.jpg">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">₪ 149.99</span>
+                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+              </div>
+          </div>
+          <div class="shop-item">
+            <span class="shop-item-title">Vanilla Absolute</span>
+            <img class="shop-item-image" src="./images/images/vanile absolute.jpg">
+            <div class="shop-item-details">
+                <span class="shop-item-price">₪ 154.99</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="shop-item">
+          <span class="shop-item-title">Van Gogh All kind</span>
+          <img class="shop-item-image" src="./images/images/van gogh double espresso.jpg">
+          <div class="shop-item-details">
+              <span class="shop-item-price">₪ 79.99</span>
+              <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+          </div>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-title">Stoli </span>
+        <img class="shop-item-image" src="./images/images/stoly.jpeg">
+        <div class="shop-item-details">
+            <span class="shop-item-price">₪ 69.99</span>
+            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+        </div>
+    </div>
+    <div class="shop-item">
+      <span class="shop-item-title">Rusky standard</span>
+      <img class="shop-item-image" src="./images/images/Rusky standard.jpg">
+      <div class="shop-item-details">
+          <span class="shop-item-price">₪ 59.99</span>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+      </div>
+  </div>
+  <div class="shop-item">
+    <span class="shop-item-title">Grey Goose</span>
+    <img class="shop-item-image" src="./images/images/grey goss.jpg">
+    <div class="shop-item-details">
+        <span class="shop-item-price">₪ 109.99</span>
+        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+    </div>
+  </div>
+  <div class="shop-item">
+    <span class="shop-item-title">Finlandia</span>
+    <img class="shop-item-image" src="./images/images/Finlandia.jpg">
+    <div class="shop-item-details">
+        <span class="shop-item-price">₪ 59.99</span>
+        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+    </div>
+  </div>
+  </div>
+     </section>
+     <section class="container content-section">
+      <h2 class="section-header">Whiskey 1 l</h2>
+      <div class="shop-items">
+          <div class="shop-item">
+              <span class="shop-item-title">Jack Daniels</span>
+              <img class="shop-item-image" src="./images/images/Jack Daniels.jpg">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">₪ 99.99</span>
+                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+               </div>
+           </div>
+           <div class="shop-item">
+              <span class="shop-item-title">Jameson</span>
+              <img class="shop-item-image" src="./images/images/Jameson.jpg">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">₪ 109.99</span>
+                  <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+              </div>
+          </div>
+          <div class="shop-item">
+              <span class="shop-item-title">Benromach</span>
+              <img class="shop-item-image" src="./images/images/Benromach.jpg">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">₪ 215.99</span>
+                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+              </div>
+          </div>
+          <div class="shop-item">
+              <span class="shop-item-title">Chivas</span>
+              <img class="shop-item-image" src="./images/images/Chivas.jpeg">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">₪ 119.99</span>
+                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+              </div>
+            </div>
+              <div class="shop-item">
+                <span class="shop-item-title">Jack Daniels</span>
+                <img class="shop-item-image" src="./images/images/Jack Daniels.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">₪ 99.99</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+          </div>
+          <div class="shop-item">
+            <span class="shop-item-title">Jim beam</span>
+            <img class="shop-item-image" src="./images/images/Jim beam.jpeg">
+            <div class="shop-item-details">
+                <span class="shop-item-price">₪ 85.99</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-title">Johnny walker Black label</span>
+        <img class="shop-item-image" src="./images/images/Joony walker.jpg">
+        <div class="shop-item-details">
+            <span class="shop-item-price">₪ 109.99</span>
+            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+        </div>
+      </div>
+      </div>
+      </section>
+      <section class="container content-section">
+        <h2 class="section-header">Soft drinks</h2>
+        <div class="shop-items">
+            <div class="shop-item">
+                <span class="shop-item-title">Coca Cola</span>
+                <img class="shop-item-image" src="./images/images/Coca Cola.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">₪ 9.99</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                 </div>
+             </div>
+             <div class="shop-item">
+                <span class="shop-item-title">Sprite</span>
+                <img class="shop-item-image" src="./images/images/Sprite.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">₪ 9.99</span>
+                    <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Fanta</span>
+                <img class="shop-item-image" src="./images/images/Fanta.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">₪ 9.99</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">XL</span>
+                <img class="shop-item-image" src="./images/images/XL.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">₪ 3.99</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+              </div>
+                <div class="shop-item">
+                  <span class="shop-item-title">Cranberry</span>
+                  <img class="shop-item-image" src="./images/images/Cranberry.jpg">
+                  <div class="shop-item-details">
+                      <span class="shop-item-price">₪ 16.99</span>
+                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                  </div>
+            </div>
+            <div class="shop-item">
+              <span class="shop-item-title">Jumex</span>
+              <img class="shop-item-image" src="./images/images/Jumex.jpg">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">₪ 19.99</span>
+                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+              </div>
+        </div>
+        <div class="shop-item">
+          <span class="shop-item-title">Schweppes</span>
+          <img class="shop-item-image" src="./images/images/Schweppes.jpg">
+          <div class="shop-item-details">
+              <span class="shop-item-price">₪12.99</span>
+              <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+          </div>
+        </div>
+        </div>
+        </section>
+       </div>  
+    </div>
+    </div>
+
+   <div>
+   <section class="container content-section">
+    <h2 class="section-header">CART</h2>
+    <div class="cart-row">
+        <span class="cart-item cart-header cart-column">ITEM</span>
+        <span class="cart-price cart-header cart-column">PRICE</span>
+        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+    </div>
+    <div class="cart-items">
+    </div>
+    <div class="cart-total">
+        <strong class="cart-total-title">Total</strong>
+        <span class="cart-total-price">₪ 0</span>
+    </div>
+    <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+   </section>
+   </div>
+
+   <!-- bootom of page facebook,google,twiter -->
+   <div id="footer">
+    <div>
+      <div class="connect">
+        <a href="https://www.facebook.com/" class="facebook">facebook</a>
+        <a href="https://twitter.com/" class="twitter">twitter</a>
+        <a href="https://myaccount.google.com/" class="googleplus">googleplus</a>
+        <a href="https://www.pinterest.com/" class="pinterest">pinterest</a>
+      </div>
+      <p>&copy; 2022 suplly web. All Rights Reserved.</p>
+    </div>
+  </div>
+  </div>
+  <script src="./JS/index.js"></script>
+</body>
+<script src="./JS/store.js" async></script>
+</html>
+
+
+
+

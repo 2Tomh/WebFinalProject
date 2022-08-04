@@ -3,7 +3,7 @@
 	background-position: 0 -326px;
 }
 #body.contact div.body {
-    background: url(./images/map.PNG) no-repeat center top #000000;
+    background: url(../images/map.PNG) no-repeat center top #000000;
     margin: 0;
     max-width: none;
     padding: 0;
@@ -15,13 +15,7 @@
     overflow: hidden;
     padding: 39px 0 0;
 }
-#body.contact div.body div div {
-    background: url(../images/bg-transparent.png) repeat;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 30px 0 35px 133px;
-    width: 747px;
-}
+
 #body.contact div.body div div img {
     float: left;
     left: auto;
@@ -270,6 +264,7 @@
     margin: 10% auto 0;
     padding: 36px 0 34px;
     width: 90%;
+    background-color: #2b3843d9;
 }
 #body div.footer div.article {
     float: none;
@@ -279,7 +274,7 @@
 }
 #body div.footer {
     margin: 0 auto;
-    max-width: 960px;
+    max-width: fit-content;
     overflow: hidden;
     padding: 40px 0 110px;
 }
@@ -291,5 +286,37 @@ form {
     border:1px solid #191919;
     overflow:hidden;
     position:relative;
-    box-shadow: 0 5px 10px 5px rgba(179, 35, 35, 0.2);
+    box-shadow: 0 5px 10px 5px rgba(194, 31, 31, 0.2);
+}
+
+.ab-img {
+	background-image: url("..//images/images/contactPgoto.jpg");
+	min-height: 380px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+  }
+#body div.sidebar h1{
+    font-family: "segoe UI", Arial, sans-serif;
+    font-weight: 600;
+    margin:10px 0;
+    color: rgb(255, 255, 255);
+}
+#body div.sidebar p{
+    color: rgb(255, 255, 255);
+    font-family: "segoe UI", Arial, sans-serif;
+    font-weight: 600;
+    margin:10px 0;
+    font-size: large;
+    font-weight: bold;
+}
+#body div.sidebar  header{
+    color: black;
+    text-decoration: underline;
+    font-family: "segoe UI", Arial, sans-serif;
+    font-weight: 900;
+    margin:10px 0; 
+    position: relative;
+    text-size-adjust:inherit;
+    font-size:xx-large;
 }

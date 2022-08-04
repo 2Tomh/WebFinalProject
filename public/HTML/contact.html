@@ -8,19 +8,20 @@
 
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="HomePage.css">
+    <link rel="stylesheet" href="./CSS/HomePage.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/contact.css">
+   
 </head>
 <body>
     
   <!-- Sidebar -->
   <div class="w3-sidebar w3-bar-block w3-border-right w3-black" style="display:none" id="mySidebar">
     <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-    <a href="/login" class="w3-bar-item w3-button">Login</a>
     <a href="/" class="w3-bar-item w3-button" >Home</a>
-    <a href="/about us" class="w3-bar-item w3-button">About us</a>
+    <a href="/about" class="w3-bar-item w3-button">About us</a>
     <a href="/contact" class="w3-bar-item w3-button" >Contact</a>
+    <a href="/store" class="w3-bar-item w3-button" >store</a>
     <a class="w3-bar-item w3-button" id="Logout">Log out</a>
   </div>
 
@@ -29,10 +30,6 @@
     <div id="nav-container">
       <button class="w3-button w3-bar-block w3-xlarge w3-orange" onclick="w3_open()">☰</button>
       <img id="bottles">
-    </div>
-    <div class="w3-container">
-
-      <h1>Ethan-all</h1>
     </div>
   </div>
 
@@ -47,22 +44,24 @@
             </div>
         </div>
     </div>
-    <div class="footer">
+    <div class="footer" >
         <div class="contact">
+          
             <h1>Please Fill Your Information</h1>
             <form action="/personDATA" method="get">
                 <input type="text" name="Name" value="Name" onblur="this.value=!this.value?'Name':this.value;" onfocus="this.select()" onclick="this.value='';">
-                <input type="text" name="Email" value="Email" onblur="this.value=!this.value?'Email':this.value;" onfocus="this.select()" onclick="this.value='';">
+                 <input type="text" name="Email" value="Email" onblur="this.value=!this.value?'Email':this.value;" onfocus="this.select()" onclick="this.value='';">
                 <input type="text" name="Subject" value="Subject" onblur="this.value=!this.value?'Subject':this.value;" onfocus="this.select()" onclick="this.value='';">
                 <textarea name="Meassage" cols="50" rows="7">Share your thoughts</textarea>
                 <input type="submit" value="Send" id="submit">
             </form>
-        </div>
+        
         <div class="section">
             <h1>WE’D LOVE TO HEAR FROM YOU.</h1>
         </div>
     </div>
-</div>
+  </div>
+      </div>
  <!-- bootom of page facebook,google,twiter -->
  <div id="footer">
     <div>
@@ -76,6 +75,6 @@
     </div>
   </div>
   </div>
-  <script src="./index.js"></script>
+  <script src="./JS/index.js"></script>
 </body>
 </html>
