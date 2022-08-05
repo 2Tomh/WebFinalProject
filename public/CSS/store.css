@@ -18,6 +18,15 @@ body{
     height: auto;
 }
 
+#searchBar{
+    margin-top: 50px;
+    margin-left: 25%;
+    display: inline-block;
+    margin-left: 35%;
+    width: 30%;
+    background: black;
+    color: #fffffff0;
+}
 .center{
     position: relative;
     margin: auto;

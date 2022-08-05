@@ -7,8 +7,10 @@ if (document.readyState == 'loading') {
 
 fetchProducts()
 const cart = [];
+const allProducts = [];
 
 const categoryContainer = document.getElementById("category-container")
+var searchBar
 
 function ready() {
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
@@ -30,6 +32,31 @@ function ready() {
     }
 
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
+    searchBar = document.getElementById("searchBar")
+    searchBar.addEventListener('input', e => {
+        const value = e.target.value.toLowerCase()
+        console.log(value)
+        let matchValues = [];
+        while (categoryContainer.firstChild) {
+            categoryContainer.removeChild(categoryContainer.firstChild)
+        }
+        if(value.length === 0){
+            for(let i =0; i<allProducts.length; i++){
+            createCategories(allProducts[i])
+            }
+        } else {
+            for(let i =0; i<allProducts.length; i++){
+                for(let g =0;g<allProducts[i].length;g++){
+                    if(allProducts[i][g].name.toLowerCase().startsWith(value)){
+                        matchValues.push(allProducts[i][g]);
+                    }
+                }
+            }
+            console.log(matchValues)
+            createCategories(matchValues)
+        }
+    })
+
 }
 
 function purchaseClicked() {
@@ -50,58 +77,67 @@ function purchaseClicked() {
 }
 
 function fetchProducts(){
-    fetch("/categories").then(res =>res.json()).then(categories =>{
-        for(let i =0; i< categories.length ; i++){
-            createCategories(categories[i]);
-    }}
-    )
+    fetchProducts("")
 }
 
-function createCategories(category){
+function fetchProducts(name){
+    console.log("name " + name)
+    fetch("/categories").then(res =>res.json()).then(categories =>{
+    
+        let group = categories.reduce((r, a) =>{
+            r[a.category] = [...r[a.category] || [], a];
+            return r
+        },{})
+        const objectKeys = Object.keys(group);
+        console.log(group[objectKeys[0]])
+        for (let i=0; i < objectKeys.length; i++) {
+                allProducts.push(group[objectKeys[i]])
+            createCategories(group[objectKeys[i]])
+        }
+    })
+}
+
+function createCategories(category, filter){
         const categorySection = document.createElement('section');
         const categoryTitle = document.createElement("h2");
         const itemsContainer = document.createElement("div");
         categorySection.className = 'container content-section';
         categoryTitle.className = 'section-header';
-        categoryTitle.innerHTML = category.name;
+        categoryTitle.innerHTML = category[0].category;
         itemsContainer.className = 'shop-items';
 
         categorySection.appendChild(categoryTitle)
         categorySection.appendChild(itemsContainer)
 
+        for (let i=0; i < category.length; i++) {
 
+            const itemContainer = document.createElement("div");
+            const itemTitle = document.createElement("span");
+            const image = document.createElement("img");
+            const itemsDetails = document.createElement("div");
+            const itemPrice = document.createElement("span");
+            const button = document.createElement("button");
 
-        console.log(category)
-        for(let i =0; i<category.products.product.length; i++){
+            itemContainer.className = 'shop-item';
+            itemContainer.id = category[i]._id
+            itemTitle.className = 'shop-item-title';
+            itemTitle.innerHTML = category[i].name;
+            image.className = 'shop-item-image';
+            image.src = `${category[i].imagePath}`
+            itemsDetails.className = 'shop-item-details';
+            itemPrice.className= 'shop-item-price';
+            itemPrice.innerHTML = category[i].price
+            button.className = 'btn btn-primary shop-item-button'
+            button.type = 'button'
+            button.innerHTML = 'Add to cart'
+            button.addEventListener('click', addToCartClicked);
 
-        const itemContainer = document.createElement("div");
-        const itemTitle = document.createElement("span");
-        const image = document.createElement("img");
-        const itemsDetails = document.createElement("div");
-        const itemPrice = document.createElement("span");
-        const button = document.createElement("button");
-    
-
-        itemContainer.className = 'shop-item';
-        itemContainer.id = category.products.product[i]._id
-        itemTitle.className = 'shop-item-title';
-        itemTitle.innerHTML =category.products.product[i].name;
-        image.className = 'shop-item-image';
-        image.src = `${category.products.product[i].imagePath}`
-        itemsDetails.className = 'shop-item-details';
-        itemPrice.className= 'shop-item-price';
-        itemPrice.innerHTML = category.products.product[i].price
-        button.className = 'btn btn-primary shop-item-button'
-        button.type = 'button'
-        button.innerHTML = 'Add to cart'
-
-        itemsDetails.appendChild(itemPrice)
-        itemsDetails.appendChild(button);
-        itemContainer.appendChild(itemTitle);
-        itemContainer.appendChild(image);
-        itemContainer.appendChild(itemsDetails);
-        console.log(itemContainer)
-        itemsContainer.appendChild(itemContainer)
+            itemsDetails.appendChild(itemPrice)
+            itemsDetails.appendChild(button);
+            itemContainer.appendChild(itemTitle);
+            itemContainer.appendChild(image);
+            itemContainer.appendChild(itemsDetails);
+            itemsContainer.appendChild(itemContainer)
         }
 
         categoryContainer.appendChild(categorySection)

@@ -52,22 +52,23 @@ exports.purchase = purchase
 
 async function getCategories(){
     await client.connect();
-    const categories = await client.db("Alcohol").collection("Categories").aggregate([
-        {
-            $lookup:
-            {
-                from:'Products',
-                localField: 'item',
-                foreignField: 'products.productId',
-                as: 'products.product'
+    const cursor =   client.db("Alcohol").collection("Products").find({});
+const products = await cursor.toArray()
+    // const categories = await client.db("Alcohol").collection("Categories").aggregate([
+    //     {
+    //         $lookup:
+    //         {
+    //             from:'Products',
+    //             localField: 'item',
+    //             foreignField: 'products.productId',
+    //             as: 'products.product'
 
-            }
-        },
-      
-        
-    ]).toArray()
+    //         }
+    //     }
+    // ]).toArray()
+    console.log(products)
     await client.close()
-    return categories;
+    return products;
 }
 
 exports.getCategories = getCategories
